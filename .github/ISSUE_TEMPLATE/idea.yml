@@ -1,0 +1,23 @@
+name: idea
+description: suggest a change, an option or a new theme
+labels: [idea]
+body:
+  - type: markdown
+    attributes:
+      value: english or portuguese, both are fine (pode escrever em português).
+  - type: dropdown
+    id: theme
+    attributes:
+      label: theme
+      options:
+        - wired (myanimelist)
+        - a new theme
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: what's the idea?
+      description: references and screenshots are welcome
+    validations:
+      required: true

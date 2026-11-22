@@ -1,0 +1,54 @@
+name: bug report
+description: something looks broken or doesn't work
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: thanks for taking the time to report this! the more detail, the faster it gets fixed. english or portuguese, both are fine (pode escrever em português).
+  - type: dropdown
+    id: theme
+    attributes:
+      label: theme
+      options:
+        - wired (myanimelist)
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: what's wrong?
+      description: what happened, and what did you expect instead?
+      placeholder: the order button overlaps the search box...
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: screenshot
+      description: drag an image here, it helps a lot
+  - type: input
+    id: link
+    attributes:
+      label: link to your list
+      placeholder: https://myanimelist.net/animelist/your-name
+  - type: dropdown
+    id: viewer
+    attributes:
+      label: whose view?
+      description: some things only load for the list owner
+      options:
+        - mine, logged in
+        - someone else's / logged out
+        - not sure
+  - type: input
+    id: browser
+    attributes:
+      label: browser and device
+      placeholder: firefox on windows, chrome on android...
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: before sending
+      options:
+        - label: i pasted the whole theme file and nothing else is in the custom css box
+          required: true
