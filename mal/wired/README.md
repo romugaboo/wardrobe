@@ -62,7 +62,7 @@ The options are in the `OPTIONS` block at the top of [`wired.css`](wired.css).
 After editing, paste the file into MAL again and save.
 
 > [!TIP]
-> Fonts come from Google Fonts, which MAL only loads for the list owner. Visitors get a local monospace font scaled to the same size, so the layout doesn't change.
+> Don't add an `@import` to the file. When the CSS has one, MAL hides the whole theme from everyone but you, so your list looks fine on your account and plain to visitors. The fonts come in through `@font-face`, but MAL only lets them load for you. Visitors see a monospace font from their own system instead.
 
 <br/>
 

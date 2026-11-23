@@ -62,7 +62,7 @@ As opções ficam no bloco `OPTIONS`, no começo do [`wired.css`](wired.css).
 Editou? Cola o arquivo de novo no MAL e salva.
 
 > [!TIP]
-> As fontes vêm do Google Fonts, que o MAL só carrega pra dona da lista. Quem visita vê uma fonte monoespaçada do próprio sistema, ajustada pro mesmo tamanho, então o layout não muda.
+> Não coloca `@import` no arquivo. Quando o CSS tem um, o MAL esconde o tema inteiro de todo mundo menos de você, aí a lista fica certinha na sua conta e sem tema pra quem visita. As fontes entram por `@font-face`, mas o MAL só deixa elas carregarem pra você. Quem visita vê uma fonte monoespaçada do próprio sistema.
 
 <br/>
 

@@ -11,8 +11,6 @@
  * into "Add Custom CSS". Upload a cover image to replace the default banner.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=VT323&display=swap');
-
 /*========== OPTIONS ==========*/
 
 :root {
@@ -79,8 +77,20 @@
   --arrowLt: url(https://files.catbox.moe/68o5bn.svg);
 }
 
-/* MAL only loads @import for the list owner, so visitors fall back to a
-   local monospace font scaled down to roughly match VT323 */
+/* no @import here: when the CSS has one, MAL comments the whole file out
+   for everyone except the list owner. these @font-face urls also only load
+   for the owner, visitors get the fallback below, sized to match VT323 */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-weight: 400 700;
+  font-display: swap;
+  src: local('JetBrains Mono'), url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'VT323';
+  font-display: swap;
+  src: local('VT323'), url(https://fonts.gstatic.com/s/vt323/v18/pxiKyp0ihIEF2isfFJU.woff2) format('woff2');
+}
 @font-face {
   font-family: 'wired-crt-fallback';
   src: local('Consolas'), local('Menlo'), local('DejaVu Sans Mono'), local('Courier New');
